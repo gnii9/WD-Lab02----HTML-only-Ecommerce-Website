@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Form đặt hàng mẫu Góc Học Nhỏ: thực hành cấu trúc form HTML5 tĩnh, phương thức GET, nhãn label và thuộc tính validation.">
+  <title>Đặt hàng mẫu | Góc Học Nhỏ - Văn Phòng Phẩm</title>
+</head>
+<body bgcolor="#F1F5F9" text="#1E293B" link="#2563EB" vlink="#475569" alink="#DC2626" topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0">
+
+<!-- Bỏ qua menu hỗ trợ trợ năng -->
+<table width="100%" bgcolor="#0F172A" border="0" cellpadding="4" cellspacing="0">
+  <tr>
+    <td align="center">
+      <font face="Segoe UI, Roboto, Helvetica, Arial, sans-serif" color="#CBD5E1" size="2">
+        <a href="#noi-dung"><font color="#FBBF24">Bỏ qua menu đến nội dung chính</font></a> &nbsp; | &nbsp;
+        📞 Hotline hỗ trợ: <b>1900 6868 (demo)</b> &nbsp; | &nbsp;
+        🚚 Miễn phí vận chuyển toàn quốc từ 150.000 đ &nbsp; | &nbsp;
+        📍 Mở cửa: 08:00 - 21:00 mỗi ngày
+      </font>
+    </td>
+  </tr>
+</table>
+
+<!-- Khung bao bọc chính 1140px căn giữa -->
+<table width="1140" align="center" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+<tr>
+<td>
+
+<!-- HEADER CHÍNH -->
+<header>
+  <!-- Banner thương hiệu -->
+  <table width="100%" bgcolor="#1E293B" border="0" cellpadding="20" cellspacing="0">
+    <tr>
+      <td width="50%" valign="middle">
+        <font face="Segoe UI, Roboto, Helvetica, Arial, sans-serif" color="#FFFFFF" size="6">
+          <b>📚 GÓC HỌC NHỎ</b>
+        </font>
+        <br>
+        <font face="Segoe UI, Roboto, Helvetica, Arial, sans-serif" color="#FBBF24" size="3">
+          <i>Ghi điều hay · Gom ý tưởng · Đồng hành cùng học sinh, sinh viên</i>
+        </font>
+      </td>
+      <td width="50%" align="right" valign="middle">
+        <font face="Segoe UI, Roboto, Helvetica, Arial, sans-serif" color="#94A3B8" size="2">
+          <b>FORM ĐẶT HÀNG MẪU (STATIC ORDER FORM)</b><br>
+          <font color="#FFFFFF">Thực hành HTML Form Controls · Method GET · Validation</font>
+        </font>
+      </td>
+    </tr>
+  </table>
+
+  <!-- Menu điều hướng chính -->
+  <table width="100%" bgcolor="#0284C7" border="0" cellpadding="10" cellspacing="0">
+    <tr>
+      <td align="center">
+        <nav aria-label="Điều hướng chính">
+          <font face="Segoe UI, Roboto, Helvetica, Arial, sans-serif" size="3">
+            <a href="index.html"><font color="#FFFFFF"><b>🏠 TRANG CHỦ</b></font></a>
+            &nbsp; &nbsp; <font color="#BAE6FD">|</font> &nbsp; &nbsp;
+            <a href="index.html#san-pham"><font color="#FFFFFF"><b>📦 DANH MỤC SẢN PHẨM</b></font></a>
+            &nbsp; &nbsp; <font color="#BAE6FD">|</font> &nbsp; &nbsp;
+            <a href="chi-tiet.html"><font color="#FFFFFF"><b>🔍 CHI TIẾT 10 MẶT HÀNG</b></font></a>
+            &nbsp; &nbsp; <font color="#BAE6FD">|</font> &nbsp; &nbsp;
+            <a href="bang-gia.html"><font color="#FFFFFF"><b>📊 BẢNG TỔNG HỢP GIÁ</b></font></a>
+            &nbsp; &nbsp; <font color="#BAE6FD">|</font> &nbsp; &nbsp;
+            <a href="dat-hang.html"><font color="#FDE047"><b>✉ FORM ĐẶT MẪU (GET)</b></font></a>
+          </font>
+        </nav>
+      </td>
+    </tr>
+  </table>
+</header>
+
+<!-- MAIN CONTENT -->
+<main id="noi-dung">
+
+  <!-- Giới thiệu trang đặt hàng & Cảnh báo an toàn dữ liệu -->
+  <table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#F8FAFC">
+    <tr>
+      <td>
+        <font face="Segoe UI, Roboto, Helvetica, Arial, sans-serif" color="#64748B" size="2">
+          <a href="index.html"><font color="#2563EB">Trang chủ</font></a> &gt; 
+          <b>Đặt hàng mẫu</b>
+        </font>
+        <h1>
+          <font face="Segoe UI, Roboto, Helvetica, Arial, sans-serif" color="#0F172A" size="5">
+            ✉ FORM ĐẶT HÀNG MẪU (THỰC HÀNH HTML5 TĨNH)
+          </font>
+        </h1>
+        <!-- Khung chú thích giáo dục -->
+        <table width="100%" border="1" bordercolor="#FDE68A" cellpadding="10" cellspacing="0" bgcolor="#FFFBEB">
+          <tr>
+            <td>
+              <font face="Segoe UI, Roboto, Helvetica, Arial, sans-serif" color="#92400E" size="2">
+                <b>⚠️ LƯU Ý BẢO MẬT &amp; PHẠM VI BÀI THỰC HÀNH:</b><br>
+                Đây là form mô phỏng thuần HTML sử dụng phương thức <code>method="get"</code>. Khi nhấn Gửi, toàn bộ dữ liệu có trường <code>name</code> sẽ được đính kèm vào thanh địa chỉ URL và chuyển tới trang <code>xac-nhan.html</code>.<br>
+                • <b>Chỉ nhập thông tin giả lập</b> (ví dụ họ tên: Nguyen Van A, email: demo@example.com).<br>
+                • Form <b>không lưu trữ</b> vào cơ sở dữ liệu, không xử lý thanh toán thật và không gửi email xác nhận.
+              </font>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+
+  <!-- KHU VỰC FORM ĐẶT HÀNG BỐ TRÍ 2 CỘT CHUẨN E-COMMERCE CHECKOUT -->
+  <table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#FFFFFF">
+    <tr>
+      <td>
+
+        <form action="xac-nhan.html" method="get">
+
+          <table width="100%" border="0" cellpadding="0" cellspacing="16">
+            <tr>
+              <!-- CỘT TRÁI (55%): THÔNG TIN NGƯỜI ĐẶT & GIAO NHẬN -->
+              <td width="55%" valign="top">
+
+                <fieldset>
+                  <legend>
+                    <font face="Segoe UI, Roboto, Helvetica, Arial, sans-serif" color="#1E3A8A" size="3">
+                      <b>👤 1. THÔNG TIN NGƯỜI ĐẶT HÀNG</b>
+                    </font>
+                  </legend>
+
+                  <table width="100%" border="0" cellpadding="8" cellspacing="0">
+                    <tr>
+                      <td>
+                        <label for="ho-ten">
+                          <font face="Segoe UI, Roboto, Helvetica, Arial, sans-serif" size="2">
+                            <b>Họ và tên người nhận *</b>
+                          </font>
+                        </label>
+                        <br>
+                        <input id="ho-ten" name="hoTen" type="text" minlength="2" maxlength="60" required placeholder="Ví dụ: Nguyễn Văn An" size="45">
+                        <br>
+                        <font face="Segoe UI, Roboto, Helvetica, Arial, sans-serif" color="#64748B" size="1">Tối thiểu 2 ký tự, tối đa 60 ký tự</font>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <label for="email">
+                          <font face="Segoe UI, Roboto, Helvetica, Arial, sans-serif" size="2">
+                            <b>Địa chỉ Email nhận thông báo *</b>
+                          </font>
+                        </label>
+                        <br>
+                        <input id="email" name="email" type="email" required placeholder="demo@example.com" size="45">
+                        <br>
+                        <font face="Segoe UI, Roboto, Helvetica, Arial, sans-serif" color="#64748B" size="1">Trình duyệt sẽ kiểm tra định dạng email chuẩn có ký tự @</font>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <label for="dien-thoai">
+                          <font face="Segoe UI, Roboto, Helvetica, Arial, sans-serif" size="2">
+                            <b>Số điện thoại liên hệ (giả lập, không bắt buộc)</b>
+                          </font>
+                        </label>
+                        <br>
+                        <input id="dien-thoai" name="dienThoai" type="tel" pattern="[0-9]{10}" title="Vui lòng nhập đúng 10 chữ số hoặc để trống" placeholder="0900000000" size="45">
+                        <br>
+                        <font face="Segoe UI, Roboto, Helvetica, Arial, sans-serif" color="#64748B" size="1">Định dạng 10 chữ số (minh họa regex pattern)</font>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <label for="dia-chi">
+                          <font face="Segoe UI, Roboto, Helvetica, Arial, sans-serif" size="2">
+                            <b>Địa chỉ nhận hàng (giả lập)</b>
+                          </font>
+                        </label>
+                        <br>
+                        <input id="dia-chi" name="diaChi" type="text" placeholder="Số 123 đường ABC, Quận XYZ, TP.HCM" size="45">
+                      </td>
+                    </tr>
+                  </table>
+                </fieldset>
+
+                <br>
+
+                <!-- PHƯƠNG THỨC GIAO NHẬN -->
+                <fieldset>
+                  <legend>
+                    <font face="Segoe UI, Roboto, Helvetica, Arial, sans-serif" color="#1E3A8A" size="3">
+                      <b>🚚 2. HÌNH THỨC GIAO NHẬN HÀNG *</b>
+                    </font>
+                  </legend>
+
+                  <table width="100%" border="0" cellpadding="8" cellspacing="0">
+                    <tr>
+                      <td>
+                        <input id="nhan-truc-tiep" name="nhanHang" type="radio" value="tai-cua-hang" required>
+                        <label for="nhan-truc-tiep">
+                          <font face="Segoe UI, Roboto, Helvetica, Arial, sans-serif" size="2">
+                            <b>Nhận tại cửa hàng:</b> Số 123 Đường Sách, Q.1, TP.HCM (Miễn phí)
+                          </font>
+                        </label>
+                        <br><br>
+                        <input id="giao-tan-noi" name="nhanHang" type="radio" value="giao-tan-noi">
+                        <label for="giao-tan-noi">
+                          <font face="Segoe UI, Roboto, Helvetica, Arial, sans-serif" size="2">
+                            <b>Giao tận nơi:</b> Chuyển phát nhanh 2-4 ngày toàn quốc (Demo)
+                          </font>
+                        </label>
+                      </td>
+                    </tr>
+                  </table>
+                </fieldset>
+
+                <br>
+
+                <!-- GHI CHÚ ĐƠN HÀNG -->
+                <fieldset>
+                  <legend>
+                    <font face="Segoe UI, Roboto, Helvetica, Arial, sans-serif" color="#1E3A8A" size="3">
+                      <b>📝 3. GHI CHÚ THÊM CHO ĐƠN HÀNG</b>
+                    </font>
+                  </legend>
+
+                  <table width="100%" border="0" cellpadding="8" cellspacing="0">
+                    <tr>
+                      <td>
+                        <label for="ghi-chu">
+                          <font face="Segoe UI, Roboto, Helvetica, Arial, sans-serif" size="2">
+                            Lời nhắn hoặc yêu cầu thời gian giao hàng (tối đa 300 ký tự):
+                          </font>
+                        </label>
+                        <br>
+                        <textarea id="ghi-chu" name="ghiChu" rows="4" cols="45" maxlength="300" placeholder="Ví dụ: Giao giờ hành chính, gọi trước khi đến..."></textarea>
+                      </td>
+                    </tr>
+                  </table>
+                </fieldset>
+
+              </td>
+
+              <!-- CỘT PHẢI (45%): CHI TIẾT SẢN PHẨM & XÁC NHẬN ĐƠN MẪU -->
+              <td width="45%" valign="top">
+
+                <fieldset id="chon-san-pham">
+                  <legend>
+                    <font face="Segoe UI, Roboto, Helvetica, Arial, sans-serif" color="#1E3A8A" size="3">
+                      <b>📦 4. LỰA CHỌN SẢN PHẨM &amp; SỐ LƯỢNG</b>
+                    </font>
+                  </legend>
+
+                  <!-- Các anchor fragment để liên kết từ catalog -->
+                  <a id="VP01"></a><a id="VP02"></a><a id="VP03"></a><a id="VP04"></a><a id="VP05"></a>
+                  <a id="VP06"></a><a id="VP07"></a><a id="VP08"></a><a id="VP09"></a><a id="VP10"></a>
+
+                  <table width="100%" border="0" cellpadding="8" cellspacing="0">
+                    <tr>
+                      <td>
+                        <label for="san-pham">
+                          <font face="Segoe UI, Roboto, Helvetica, Arial, sans-serif" size="2">
+                            <b>Chọn mẫu sản phẩm văn phòng phẩm *</b>
+                          </font>
+                        </label>
+                        <br>
+                        <select id="san-pham" name="maSanPham" required>
+                          <option value="">-- Vui lòng chọn 1 sản phẩm --</option>
+                          <optgroup label="📖 Nhóm Sổ và giấy ghi chép">
+                            <option value="VP01">VP01 - Sổ chấm A5 Bullet Journal (55.000 đ)</option>
+                            <option value="VP02">VP02 - Sổ lò xo A6 bỏ túi (39.000 đ)</option>
+                            <option value="VP03">VP03 - Planner tuần Weekly (69.000 đ)</option>
+                            <option value="VP04">VP04 - Giấy ghi chú pastel 4 tập (25.000 đ)</option>
+                          </optgroup>
+                          <optgroup label="🖊️ Nhóm Bút viết &amp; đánh dấu">
+                            <option value="VP05">VP05 - Bút gel xanh ngòi 0,5 mm (15.000 đ)</option>
+                            <option value="VP06">VP06 - Bút chì gỗ HB truyền thống (10.000 đ)</option>
+                            <option value="VP07">VP07 - Bộ bút đánh dấu 6 màu pastel (49.000 đ)</option>
+                          </optgroup>
+                          <optgroup label="📐 Nhóm Dụng cụ học tập &amp; phụ kiện">
+                            <option value="VP08">VP08 - Thước kẻ 20 cm nhựa dẻo (12.000 đ)</option>
+                            <option value="VP09">VP09 - Gôm tẩy trắng mềm dẻo (8.000 đ)</option>
+                            <option value="VP10">VP10 - Hộp bút vải Canvas lớn (79.000 đ)</option>
+                          </optgroup>
+                        </select>
+                        <br>
+                        <font face="Segoe UI, Roboto, Helvetica, Arial, sans-serif" color="#64748B" size="1">
+                          Lưu ý: HTML tĩnh không tự động chọn option từ URL fragment, bạn hãy tự chọn mã mong muốn.
+                        </font>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <label for="so-luong">
+                          <font face="Segoe UI, Roboto, Helvetica, Arial, sans-serif" size="2">
+                            <b>Số lượng đặt mua (từ 1 đến 10 món) *</b>
+                          </font>
+                        </label>
+                        <br>
+                        <input id="so-luong" name="soLuong" type="number" min="1" max="10" step="1" value="1" required size="10">
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <label for="dong-goi">
+                          <font face="Segoe UI, Roboto, Helvetica, Arial, sans-serif" size="2">
+                            <b>Quy cách đóng gói *</b>
+                          </font>
+                        </label>
+                        <br>
+                        <select id="dong-goi" name="dongGoi" required>
+                          <option value="tieu-chuan">Đóng gói tiêu chuẩn (Bảo vệ môi trường)</option>
+                          <option value="goi-qua">Đóng gói hộp quà tặng sinh viên (Demo)</option>
+                        </select>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <font face="Segoe UI, Roboto, Helvetica, Arial, sans-serif" size="2">
+                          <b>Phương thức thanh toán minh họa *</b>
+                        </font>
+                        <br>
+                        <input id="tt-cod" name="phuongThucTT" type="radio" value="cod" checked>
+                        <label for="tt-cod"><font face="Segoe UI, Roboto, Helvetica, Arial, sans-serif" size="2">Thanh toán khi nhận hàng (COD demo)</font></label>
+                        <br>
+                        <input id="tt-bank" name="phuongThucTT" type="radio" value="chuyen-khoan">
+                        <label for="tt-bank"><font face="Segoe UI, Roboto, Helvetica, Arial, sans-serif" size="2">Chuyển khoản ngân hàng (Demo)</font></label>
+                      </td>
+                    </tr>
+                  </table>
+                </fieldset>
+
+                <br>
+
+                <!-- KHUNG XÁC NHẬN ĐIỀU KHOẢN VÀ NÚT GỬI -->
+                <table width="100%" border="1" bordercolor="#93C5FD" cellpadding="14" cellspacing="0" bgcolor="#EFF6FF">
+                  <tr>
+                    <td>
+                      <p>
+                        <input id="dong-y" name="dongY" type="checkbox" value="yes" required>
+                        <label for="dong-y">
+                          <font face="Segoe UI, Roboto, Helvetica, Arial, sans-serif" color="#1E3A8A" size="2">
+                            <b>Tôi hiểu đây là form thực hành WDLab02, chỉ gửi tham số minh họa qua URL, không tạo đơn hàng hay trừ tiền thật. *</b>
+                          </font>
+                        </label>
+                      </p>
+
+                      <table width="100%" border="0" cellpadding="4" cellspacing="0">
+                        <tr>
+                          <td width="65%">
+                            <button type="submit">
+                              <font face="Segoe UI, Roboto, Helvetica, Arial, sans-serif" size="3">
+                                <b>🚀 GỬI YÊU CẦU ĐẶT HÀNG MẪU</b>
+                              </font>
+                            </button>
+                          </td>
+                          <td width="35%" align="right">
+                            <button type="reset">
+                              <font face="Segoe UI, Roboto, Helvetica, Arial, sans-serif" size="2">
+                                🔄 Nhập lại
+                              </font>
+                            </button>
+                          </td>
+                        </tr>
+                      </table>
+
+                      <p>
+                        <font face="Segoe UI, Roboto, Helvetica, Arial, sans-serif" color="#64748B" size="1">
+                          <i>(*) Các trường có dấu sao là bắt buộc. Trình duyệt sẽ tự động kiểm tra trước khi gửi.</i>
+                        </font>
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+
+              </td>
+            </tr>
+          </table>
+
+        </form>
+
+      </td>
+    </tr>
+  </table>
+
+</main>
+
+<!-- FOOTER CHUNG -->
+<footer>
+  <table width="100%" bgcolor="#0F172A" border="0" cellpadding="24" cellspacing="0">
+    <tr>
+      <td width="35%" valign="top">
+        <font face="Segoe UI, Roboto, Helvetica, Arial, sans-serif" color="#FFFFFF" size="4">
+          <b>📚 GÓC HỌC NHỎ</b>
+        </font>
+        <br><br>
+        <font face="Segoe UI, Roboto, Helvetica, Arial, sans-serif" color="#94A3B8" size="2">
+          Cửa hàng văn phòng phẩm và phụ kiện học tập chất lượng cao dành cho học sinh, sinh viên yêu thích ghi chép, lập kế hoạch và sáng tạo.
+        </font>
+        <p>
+          <font face="Segoe UI, Roboto, Helvetica, Arial, sans-serif" color="#FBBF24" size="2">
+            <b>Môn học:</b> Thiết Kế Web (Web Design)<br>
+            <b>Bài thực hành:</b> WDLab02 - HTML-Only E-Commerce
+          </font>
+        </p>
+      </td>
+
+      <td width="22%" valign="top">
+        <font face="Segoe UI, Roboto, Helvetica, Arial, sans-serif" color="#FFFFFF" size="3">
+          <b>DANH MỤC</b>
+        </font>
+        <br><br>
+        <font face="Segoe UI, Roboto, Helvetica, Arial, sans-serif" size="2">
+          • <a href="index.html#so-giay"><font color="#CBD5E1">Sổ và giấy ghi chép</font></a><br><br>
+          • <a href="index.html#but-viet"><font color="#CBD5E1">Bút viết &amp; đánh dấu</font></a><br><br>
+          • <a href="index.html#dung-cu"><font color="#CBD5E1">Dụng cụ học tập &amp; hộp bút</font></a><br><br>
+          • <a href="bang-gia.html"><font color="#FBBF24">Bảng tổng hợp giá 10 SP</font></a>
+        </font>
+      </td>
+
+      <td width="23%" valign="top">
+        <font face="Segoe UI, Roboto, Helvetica, Arial, sans-serif" color="#FFFFFF" size="3">
+          <b>TRANG THỰC HÀNH</b>
+        </font>
+        <br><br>
+        <font face="Segoe UI, Roboto, Helvetica, Arial, sans-serif" size="2">
+          • <a href="index.html"><font color="#CBD5E1">Trang chủ (index.html)</font></a><br><br>
+          • <a href="chi-tiet.html"><font color="#CBD5E1">Chi tiết sản phẩm (chi-tiet.html)</font></a><br><br>
+          • <a href="bang-gia.html"><font color="#CBD5E1">Bảng so sánh giá (bang-gia.html)</font></a><br><br>
+          • <a href="dat-hang.html"><font color="#CBD5E1">Đặt hàng mẫu (dat-hang.html)</font></a><br><br>
+          • <a href="xac-nhan.html"><font color="#CBD5E1">Kết quả demo (xac-nhan.html)</font></a>
+        </font>
+      </td>
+
+      <td width="20%" valign="top">
+        <font face="Segoe UI, Roboto, Helvetica, Arial, sans-serif" color="#FFFFFF" size="3">
+          <b>CAM KẾT BÀI LAB</b>
+        </font>
+        <br><br>
+        <font face="Segoe UI, Roboto, Helvetica, Arial, sans-serif" color="#94A3B8" size="1">
+          ✓ 100% HTML thuần &amp; attributes.<br><br>
+          ✓ Không sử dụng CSS / JS / Backend.<br><br>
+          ✓ Chạy thực tế trên máy chủ Apache Localhost.<br><br>
+          ✓ Quản lý phiên bản mã nguồn bằng Git/GitHub.
+        </font>
+      </td>
+    </tr>
+  </table>
+
+  <table width="100%" bgcolor="#020617" border="0" cellpadding="12" cellspacing="0">
+    <tr>
+      <td align="center">
+        <font face="Segoe UI, Roboto, Helvetica, Arial, sans-serif" color="#94A3B8" size="2">
+          © 2026 <b>Góc Học Nhỏ</b> · Đồ án thực hành WDLab02 · 
+          <font color="#FBBF24">Dữ liệu sản phẩm, giá bán và đặt hàng chỉ mang tính chất minh họa học tập.</font> · 
+          <a href="#noi-dung"><font color="#38BDF8">↥ Lên đầu trang</font></a>
+        </font>
+      </td>
+    </tr>
+  </table>
+</footer>
+
+</td>
+</tr>
+</table>
+
+</body>
+</html>
