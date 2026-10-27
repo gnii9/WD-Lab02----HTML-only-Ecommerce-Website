@@ -1,1 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="350" height="250" viewBox="0 0 350 250"><title>Bút gel xanh</title><rect width="350" height="250" rx="12" fill="#F4F0E6"/><ellipse cx="175" cy="220" rx="111" ry="10" fill="#E2DDCE"/><g transform="rotate(28 175 120)"><rect x="161" y="31" width="28" height="155" rx="5" fill="#42699C"/><path d="M161 184 L175 218 L189 184Z" fill="#D9BE92"/><path d="M170 207 L175 218 L180 207Z" fill="#344D40"/><rect x="161" y="31" width="28" height="18" fill="#D2D8DC"/><path d="M170 58 V170" stroke="#FFFFFF" stroke-width="3"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="350" height="250" viewBox="0 0 350 250">
+  <title>Bút gel xanh</title>
+  <rect width="350" height="250" rx="12" fill="#F4F0E6"/>
+  <ellipse cx="175" cy="220" rx="111" ry="10" fill="#E2DDCE"/>
+  <g transform="rotate(28 175 120)">
+    <rect x="168" y="24" width="14" height="14" rx="3" fill="#D2D8DC"/>
+    <rect x="163" y="36" width="24" height="141" rx="7" fill="#42699C"/>
+    <path d="M185 43 H193 V86 Q193 92 187 92" fill="none" stroke="#D2D8DC" stroke-width="4"/>
+    <path d="M170 51 V128" stroke="#FFFFFF" stroke-width="3"/>
+    <rect x="162" y="137" width="26" height="39" rx="5" fill="#30517C"/>
+    <path d="M166 145 H184 M166 154 H184 M166 163 H184" stroke="#89A5C9" stroke-width="2"/>
+    <path d="M164 176 H186 L179 198 H171Z" fill="#D2D8DC"/>
+    <rect x="173" y="198" width="4" height="12" rx="1" fill="#657582"/>
+    <circle cx="175" cy="211" r="2" fill="#42699C"/>
+  </g>
+</svg>
